@@ -61,17 +61,6 @@ public class BitwiseManipulation implements BitwiseOperations{
     }
 
     @Override
-    public int setBitStringInIntegerAtPositionK(int x, String bitString, int k) {
-        StringBuilder xAsBitString = new StringBuilder(getIntegerAs32BitString(x));
-
-        for(int i=32-k-1, j=0; j<bitString.length(); ++j, ++i){
-            xAsBitString.setCharAt(i, bitString.charAt(j));
-        }
-
-        return getBitStringAsInteger(xAsBitString.toString());
-    }
-
-    @Override
     public int setNBitsInIntegerStartingFromPositionK(int x, int n, int k) {
         StringBuilder xAsBitString = new StringBuilder(getIntegerAs32BitString(x));
         for(int i=32-k-1, j=0; j<n; ++j, ++i){
@@ -87,6 +76,17 @@ public class BitwiseManipulation implements BitwiseOperations{
         for(int i=32-k-1, j=0; j<n; ++j, ++i){
             xAsBitString.setCharAt(i, '0');
         }
+        return getBitStringAsInteger(xAsBitString.toString());
+    }
+
+    @Override
+    public int setBitStringInIntegerAtPositionK(int x, String bitString, int k) {
+        StringBuilder xAsBitString = new StringBuilder(getIntegerAs32BitString(x));
+
+        for(int i=32-k-1, j=0; j<bitString.length(); ++j, ++i){
+            xAsBitString.setCharAt(i, bitString.charAt(j));
+        }
+
         return getBitStringAsInteger(xAsBitString.toString());
     }
 }
