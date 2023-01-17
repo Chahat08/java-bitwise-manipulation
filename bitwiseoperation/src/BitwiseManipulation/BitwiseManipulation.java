@@ -15,4 +15,18 @@ public class BitwiseManipulation implements BitwiseOperations{
         flag = flag << k;
         return x & (~flag);
     }
+
+    @Override
+    public void setKthBitOfArray(int[] array, int k) {
+        int idx = k%32;
+        int position = k/32;
+        array[idx] = setKthBitOfInteger(array[idx], position);
+    }
+
+    @Override
+    public void clearKthBitofArray(int[] array, int k) {
+        int idx = k%32;
+        int position = k/32;
+        array[idx] = clearKthBitOfInteger(array[idx], position);
+    }
 }

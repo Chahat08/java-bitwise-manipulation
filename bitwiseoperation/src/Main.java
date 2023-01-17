@@ -1,5 +1,4 @@
-import BitwiseManipulation.BitwiseManipulation;
-
+import BitwiseManipulation.*;
 public class Main {
     int x=0;
 
@@ -27,9 +26,10 @@ public class Main {
 
 
         System.out.println("METHODS TEST");
-        BitwiseManipulation bitwiseManipulation = new BitwiseManipulation();
-        System.out.println(bitwiseManipulation.setKthBitOfInteger(0, 2));
-        System.out.println(bitwiseManipulation.setKthBitOfInteger(0, 3));
-        System.out.println(bitwiseManipulation.clearKthBitOfInteger(12, 2));
+        BitwiseOperations bitwiseOperations = new BitwiseManipulation();
+//        BitwiseManipulation bitwiseManipulation = new BitwiseManipulation();
+        System.out.println(bitwiseOperations.setKthBitOfInteger(0, 2));
+        System.out.println(bitwiseOperations.setKthBitOfInteger(0, 3));
+        System.out.println(bitwiseOperations.clearKthBitOfInteger(12, 2));
     }
 }
