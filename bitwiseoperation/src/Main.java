@@ -31,5 +31,20 @@ public class Main {
         System.out.println(bitwiseOperations.setKthBitOfInteger(0, 2));
         System.out.println(bitwiseOperations.setKthBitOfInteger(0, 3));
         System.out.println(bitwiseOperations.clearKthBitOfInteger(12, 2));
+        int[] arr = {0,1};
+        bitwiseOperations.setKthBitOfArray(arr, 2); //4,1
+        for(int i:arr) System.out.println(i);
+        System.out.println();
+        bitwiseOperations.setKthBitOfArray(arr, 3); //12,1
+        for(int i:arr) System.out.println(i);
+        System.out.println();
+        bitwiseOperations.setKthBitOfArray(arr, 33); //12,3
+        for(int i:arr) System.out.println(i);
+        System.out.println();
+        bitwiseOperations.clearKthBitOfArray(arr, 2); //8,3
+        for(int i:arr) System.out.println(i);
+        System.out.println();
+
+
     }
 }
