@@ -45,6 +45,18 @@ public class Main {
         for(int i:arr) System.out.println(i);
         System.out.println();
 
+        System.out.println("STRING METHODS");
+        System.out.println(bitwiseOperations.getIntegerAs32BitString(8));
+        System.out.println(bitwiseOperations.getIntegerAs32BitString(9234));
+        System.out.println();
+        System.out.println(bitwiseOperations.getBitStringAsInteger("100"));
+        System.out.println(bitwiseOperations.getBitStringAsInteger("00000"));
+        System.out.println();
+        System.out.println(bitwiseOperations.setBitStringInIntegerAtPositionK(0, "100", 3));//8
+        System.out.println(bitwiseOperations.setBitStringInIntegerAtPositionK(10, "100", 2));//4 // 1100: 12
+        System.out.println();
+        System.out.println(bitwiseOperations.setNBitsInIntegerStartingFromPositionK(0, 3, 3));//1110: 14
+        System.out.println(bitwiseOperations.clearNBitsInIntegerStartingFromPositionK(14, 1, 2));//1010: 10
 
     }
 }
