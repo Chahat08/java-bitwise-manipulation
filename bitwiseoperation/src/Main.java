@@ -58,5 +58,12 @@ public class Main {
         System.out.println(bitwiseOperations.setNBitsInIntegerStartingFromPositionK(0, 3, 3));//1110: 14
         System.out.println(bitwiseOperations.clearNBitsInIntegerStartingFromPositionK(14, 1, 2));//1010: 10
 
+
+        System.out.println("NEW METHODS");
+        System.out.println(bitwiseOperations.readKthBitOfInteger(33559540, 2));
+        System.out.println(bitwiseOperations.readKthBitOfArray(arr, 2)); // 0
+        System.out.println(bitwiseOperations.readKthBitOfArray(arr, 3)); // 1
+        String[] strs = bitwiseOperations.getIntegerAs8FourBitStrings(33559540);
+        for(String str:strs) System.out.println(str);
     }
 }
